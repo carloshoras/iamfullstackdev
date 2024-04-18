@@ -19,13 +19,16 @@ function InputCreate () {
             postNewTask()
         }
     },[clickedButton])
+
+//habria que usar form y onSubmit
     return (
         <>
         <input 
         type="text" 
         placeholder="Introduce nueva tarea"
         value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}/>
+        onChange={(e) => setInputValue(e.target.value)}
+        required/>
         <button type="button" onClick={() => setClickedButton(!clickedButton)}>Agregar Tarea</button>
         </>
     )
